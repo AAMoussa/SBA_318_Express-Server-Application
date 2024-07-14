@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Express App</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <h1>Welcome to the Express App</h1>
+  <form action="/users" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <button type="submit">Add User</button>
+  </form>
+  <h2>Users:</h2>
+  <ul>
+    <% users.forEach(user => { %>
+      <li><%= user.name %></li>
+    <% }); %>
+  </ul>
+</body>
+</html>
